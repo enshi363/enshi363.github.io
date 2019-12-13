@@ -7,12 +7,10 @@ kramdown:
   syntax_highlighter_opts:
     disable : true
 
-remote_theme: alexander-heimbuch/millidocs
+theme:      tale
 
-markdown: kramdown
-kramdown:
-  syntax_highlighter_opts:
-    disable : true
+permalink:  /:year-:month/:title
+paginate:   5
 
 exclude:
   - Gemfile
