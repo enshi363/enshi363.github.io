@@ -1,16 +1,34 @@
 title: 巧克力的小簿子
+author: 巧克力啊
 description: echo
 url : "https://note.qiaokelia.xyz" 
 
 markdown: kramdown
 kramdown:
   syntax_highlighter_opts:
-    disable : true
+    disable : false 
 
-permalink:  /:year-:month/:title
-paginate:   5
+highlighter: rouge
+
+include:
+  - _pages
+
+paginate:  10 
 
 exclude:
   - Gemfile
   - Gemfile.lock
   - README.md 
+
+plugins:
+  - jekyll-archives
+  - jekyll-paginate
+
+jekyll-archives:
+  enabled:
+    - year
+    - tags
+  layout: archives
+  permalinks:
+    year: '/archives/:year/'
+    tag: '/archives/tag/:name/'

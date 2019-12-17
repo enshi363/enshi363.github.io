@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<h1>归档 ({{page.type}}) : {{ page.date | date: "%Y" }}</h1>
+
+<ul class="posts archives">
+{% for post in page.posts %}
+  <li>
+    <span class="catalogue-time">{{ post.date | date: "%m月%d日, %Y" }}</span>
+    <a class="catalogue-item" href="{{ post.url | prepend: site.baseurl }}">
+        {{ post.title }}
+        <div class="catalogue-line"></div>
+    </a>
+  </li>
+{% endfor %}
+</ul>
