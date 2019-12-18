@@ -3,6 +3,7 @@
 ---
 
 @import 'tale';
+@import 'syntax_highlighter';
 
 
 .tags {
@@ -14,58 +15,62 @@
 
 .tags li {
   float: left; 
+  margin-right:20px;
 }
 
 .tag {
-  background: #eee;
-  border-radius: 3px 0 0 3px;
-  color: #999;
-  display: inline-block;
-  height: 26px;
-  line-height: 26px;
-  padding: 0 20px 0 23px;
-  position: relative;
-  margin: 0 10px 10px 0;
   text-decoration: none;
-  -webkit-transition: color 0.2s;
 }
 
-.tag::before {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
-  content: '';
-  height: 6px;
-  left: 10px;
-  position: absolute;
-  width: 6px;
-  top: 10px;
-}
+// .tag::before {
+//   background: #fff;
+//   border-radius: 10px;
+//   box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+//   content: '';
+//   height: 6px;
+//   left: 10px;
+//   position: absolute;
+//   width: 6px;
+//   top: 10px;
+// }
 
-.tag::after {
-  background: #fff;
-  border-bottom: 13px solid transparent;
-  border-left: 10px solid #eee;
-  border-top: 13px solid transparent;
-  content: '';
-  position: absolute;
-  right: 0;
-  top: 0;
-}
+// .tag::after {
+//   background: #fff;
+//   border-bottom: 13px solid transparent;
+//   border-left: 10px solid #eee;
+//   border-top: 13px solid transparent;
+//   content: '';
+//   position: absolute;
+//   right: 0;
+//   top: 0;
+// }
 
-.tag:hover {
-  background-color: crimson;
-  color: white;
-}
+// .tag:hover {
+//   background-color: crimson;
+//   color: white;
+// }
 
-.tag:hover::after {
-   border-left-color: crimson; 
-}
+// .tag:hover::after {
+//    border-left-color: crimson; 
+// }
 
-.archives .catalogue-item {
+
+.archives .catalogue-item,.tag .catalogue-item  {
     display:inline-block;
     padding:1px 0;
 }
 .archives .catalogue-line {
     border-top: 0.1rem solid #353535;
+}
+.tag .catalogue-line {
+  border-top: 0.1rem solid #353535;
+  width:0;
+}
+
+.tag:hover .catalogue-line, .tag:focus .catalogue-line {
+  width: 100%;
+}
+
+.tag i{
+  margin-right:2px;
 }

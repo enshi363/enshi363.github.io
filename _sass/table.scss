@@ -1,0 +1,15 @@
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    border:1px solid #ddd;
+    width: 100%;
+}
+
+th{
+    border:1px solid #ddd;
+}
+
+td{
+    border:1px solid #ddd;
+}
+tr:nth-child(even) {background-color: #f2f2f2;}

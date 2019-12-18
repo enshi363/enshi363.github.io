@@ -3,20 +3,32 @@ layout: default
 ---
 
 <div class="post">
+
   <div class="post-info">
     {% if page.date %}
-      <span>Written </span>
-      <br>
-      <span>on&nbsp;</span><time datetime="{{ page.date }}">{{ page.date | date: "%m月%d日, %Y" }}</time>
+      <span>Written on&nbsp;</span><time datetime="{{ page.date }}">{{ page.date | date: "%m月%d日, %Y" }}</time>
+    {% endif %}
+    
+    {% if page.weather %}
+    <i class="fas fa-{{site.weather[page.weather]}}">{{page.weather}}</i>
     {% endif %}
   </div>
 
   <h1 class="post-title">{{ page.title }}</h1>
   <div class="post-line"></div>
+  <ul class="tags">
+    {% for category in page.tags %}
+    <li>
+      <a class="catalogue-item tag" href="{{ site.baseurl }}/archives/tag/{{category}}/" name="{{ category }}">
+        <i class="fa fa-tag"></i>{{ category }}
+        <div class="catalogue-line"></div>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
 
   {{ content }}
 </div>
-
 
 <div class="pagination">
   {% if page.next.url %}

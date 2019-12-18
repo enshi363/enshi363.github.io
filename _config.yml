@@ -4,9 +4,10 @@ description: echo
 url : "https://note.qiaokelia.xyz" 
 
 markdown: kramdown
+
 kramdown:
-  syntax_highlighter_opts:
-    disable : false 
+  math_engine: mathjax
+  syntax_highlighter: rouge
 
 highlighter: rouge
 
@@ -32,3 +33,12 @@ jekyll-archives:
   permalinks:
     year: '/archives/:year/'
     tag: '/archives/tag/:name/'
+
+weather:
+  晴: 'sun'
+  多云: 'cloud-sun'
+  阴: 'cloud'
+  小雨: 'umbrella'
+  大雨: 'cloud-showers-heavy'
+  雪: 'snowflake'
+  雾: 'smog'
