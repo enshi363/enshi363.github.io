@@ -22,17 +22,17 @@ exclude:
   - README.md 
 
 plugins:
-  - jekyll-archives
+  # - jekyll-archives
   - jekyll-paginate
 
-jekyll-archives:
-  enabled:
-    - year
-    - tags
-  layout: archives
-  permalinks:
-    year: '/archives/:year/'
-    tag: '/archives/tag/:name/'
+# jekyll-archives:
+#   enabled:
+#     - year
+#     - tags
+#   layout: archives
+#   permalinks:
+#     year: '/archives/:year/'
+#     tag: '/archives/tag/:name/'
 
 weather:
   晴: 'sun'
